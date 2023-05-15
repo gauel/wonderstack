@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Fa from 'svelte-fa'
+  import { faFlag } from '@fortawesome/free-solid-svg-icons'
+</script>
+<div class="text-white">
+	New app
+	<Fa icon={faFlag} />
+</div>
