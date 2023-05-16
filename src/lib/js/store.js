@@ -1,6 +1,5 @@
 import { get, writable } from "svelte/store";
 import { browser } from '$app/environment';
-import { quadOut } from 'svelte/easing';
 
 /* Store factory */
 export function store(name, data, save = false) {
@@ -24,16 +23,10 @@ export function store(name, data, save = false) {
 }
 
 /* These settings are saved to a local storage */
-const settingsDefault = {
-	"dark": null,
-	"cookies": true
-}
+const storeDefaults = {}
 
 /* These settings are global variables that resets with every page refresh */
-const globDefault = {
-	"pageTitle": "Home",
-	"pageLink": "/"
-}
+const stateDefaults = {}
 
-export const settings = store("settings", settingsDefault, true);
-export const glob = store("glob", globDefault);
+export const store = store("settings", storeDefaults, true);
+export const state = store("glob", stateDefaults);

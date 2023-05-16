@@ -1,0 +1,27 @@
+let options = {
+	root: null,
+	rootMargin: "50px",
+	threshold: 0
+}
+
+export const lazyLoad = (image, src) => {
+	const loaded = () => {
+		image.style.opacity = "1"
+	}
+	const observer = new IntersectionObserver(entries => {
+		if (entries[0].isIntersecting) {
+			image.src = src
+			if (image.complete) {
+			} else {
+				image.addEventListener('load', loaded)
+			}
+		}
+	}, options)
+	observer.observe(image)
+
+	return {
+		destroy() {
+			image.removeEventListener('load', loaded)
+		}
+	}
+}

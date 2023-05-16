@@ -1,6 +1,6 @@
 <script>
 	import Fa from 'svelte-fa'
-  import { faFlag } from '@fortawesome/free-solid-svg-icons'
+	import { faFlag } from '@fortawesome/free-solid-svg-icons'
 </script>
 <div class="text-white">
 	New app

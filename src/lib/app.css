@@ -1,3 +1,49 @@
+/* Poppins font import */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+	min-height: 100vh;
+	margin: 0;
+}
+
+.scroll-disabled {
+	overflow: hidden;
+}
+
+body {
+	font-family: 'Inter';
+	height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	background: transparent;
+	width: 10px;
+	cursor: grab;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	transition-property: background;
+	transition-duration: 0.3s;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	cursor: grab;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+	cursor: grab;
+}

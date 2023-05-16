@@ -1,5 +1,5 @@
 {
-	"name": "gifyo-capacitor",
+	"name": "svelte-starter",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -29,8 +29,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@capacitor/cli": "^5.0.3",
-		"@capacitor/core": "^5.0.3",
 		"@fontsource/inter": "^4.5.15",
 		"@fortawesome/free-regular-svg-icons": "^6.4.0",
 		"@fortawesome/free-solid-svg-icons": "^6.4.0",
