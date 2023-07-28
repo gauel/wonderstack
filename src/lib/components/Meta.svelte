@@ -8,11 +8,11 @@
 	}
 
 	/* Default values */
-	let kicker = "Pulsar — ",
+	let kicker = "Website — ",
 		title = "Page title",
 		description = "Description",
 		shareImage = "/shareimage.jpg",
-		themeColor = "#10171D"
+		themeColor = "#990000"
 </script>
 
 <svelte:head>
