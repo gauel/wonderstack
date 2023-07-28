@@ -1,4 +1,9 @@
 <script>
+
+	import shareImageFile from "$lib/assets/shareimage.jpg";
+	import favIcon from "$lib/assets/favicon.png";
+	import touchIcon from "$lib/assets/touchicon.png"
+
 	export let meta = {
 		kicker: "",
 		title: "",
@@ -11,7 +16,7 @@
 	let kicker = "Website — ",
 		title = "Page title",
 		description = "Description",
-		shareImage = "/shareimage.jpg",
+		shareImage = shareImageFile,
 		themeColor = "#990000"
 </script>
 
@@ -34,6 +39,6 @@
 	<meta name="twitter:card" content="summary_large_image" />
 
 	<meta name="theme-color" content={meta.themeColor || themeColor} />
-	<link href="/touchicon.png" rel="shortcut icon" type="image/x-icon" />
-	<link href="/touchicon.png" rel="apple-touch-icon" />
+	<link href={favIcon} rel="shortcut icon" type="image/x-icon" />
+	<link href={touchIcon} rel="apple-touch-icon" />
 </svelte:head>
