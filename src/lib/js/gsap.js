@@ -10,6 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Flip);
 
+const superease = 'M0,0,C0.218,0,0.382,0.294,0.556,0.648,0.638,0.815,0.694,1,1,1';
+const customease =
+	'M0,0,C0,0,0.119,-0.012,0.202,0.052,0.424,0.228,0.365,0.575,0.61,0.838,0.75,0.988,1,1,1,1';
+
+export const superEaseEffect = CustomEase.create('custom', superease);
+export const customEaseEffect = CustomEase.create('custom', customease);
 
 let mBlurProperty;
 export let isTouch;
@@ -30,7 +36,6 @@ if (browser) {
 		isTouch = true;
 	});
 }
-
 
 /* Blur plugin */
 const getBlurProperty = () => mBlurProperty || (mBlurProperty = gsap.utils.checkPrefix('filter'));
@@ -72,12 +77,5 @@ gsap.config({
 	force3D: true,
 	overwrite: 'auto'
 })
-
-/* Onable overwrite */
-/*
-gsap.defaults({
-	overwrite: 'auto'
-});
-*/
 
 export { gsap, CustomEase, Flip, ScrollTrigger }
