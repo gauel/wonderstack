@@ -4,7 +4,7 @@
 </script>
 
 <div class="text-white w-full h-screen flex flex-col items-center justify-center gap-4 ">
-	<Image src={image} class="rounded-xl" />
+	<Image src={image} class="rounded-xl" width={1200} height={630} />
 	<h1 class="text-clamp-xs font-bold uppercase">Svelte starter</h1>
 	<p class="opacity-50">With our custom features</p>
 </div>
